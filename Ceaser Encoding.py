@@ -1,5 +1,4 @@
 import random
-
 def encode(input_string):
     encode_string=""
     key=list()
@@ -7,11 +6,11 @@ def encode(input_string):
         temp=random.randint(0,9)
         encode_string+=chr(ord(input_string[i])+temp)
         key.append(temp)
-    print(f"\n---------'{"".join(encode_string)}'-----------\n")
+    print(f"\nThe text inside brackets is cipher ---------'{"".join(encode_string)}'-----------\n")
     key_string=list()
     for i in range(len(key)):
         key_string.append(str(key[i]))
-    print(f"This is the Key to decode '{"".join(key_string)}'.")
+    print(f"This is the Key inside brackets to decode ---------'{"".join(key_string)}'----------.")
     
 
 def decode(decode_string,key_String):
