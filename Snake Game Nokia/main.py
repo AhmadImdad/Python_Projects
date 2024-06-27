@@ -21,6 +21,13 @@ screen.onkey(snake.move_down, key='Down')
 screen.onkey(snake.move_left, key='Left')
 
 food.spread_food()
+
+
+def escape():
+    turtle.bye()
+
+
+screen.onkey(escape, key='Escape')
 game_on = True
 
 while game_on:
@@ -36,12 +43,11 @@ while game_on:
 
     if (snake.head.xcor() > 285 or snake.head.xcor() < -285
             or snake.head.ycor() > 285 or snake.head.ycor() < -285):
-        game_on = False
-        score.game_over()
+        score.update_scoreboard()
+        snake.reset()
 
     for segments in snake.snakes[1:]:
         if snake.head.distance(segments) < 5:
-            game_on = False
-            score.game_over()
+            score.increase_score()
 
 screen.exitonclick()

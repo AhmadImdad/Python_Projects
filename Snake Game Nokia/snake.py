@@ -64,3 +64,12 @@ class Snake:
         for _ in range(4):
             boundary.right(90)
             boundary.forward(580)
+
+    def reset(self):
+        for snake in self.snakes:
+            snake.hideturtle()
+        self.snakes.clear()
+        self.count = 0
+        self.create_snakes()
+        self.head = self.snakes[0]
+
