@@ -30,7 +30,7 @@ while game_on:
                                   "Write the state's name : ")
     state_name = state_name.lower()
     for names in states:
-        if state_name == names:
+        if state_name == names and names not in answered_states:
             state_turtle = Turtle()
             state_turtle.penup()
             state_turtle.hideturtle()
@@ -41,14 +41,13 @@ while game_on:
             guessed += 1
             answered_states.append(state_name)
             break
+        elif state_name in answered_states:
+            break
         index += 1
 
     if index == len(states):
         game_on = False
-        temp_list = list()
-        for names in states:
-            if not (names in answered_states):
-                temp_list.append(names)
+        temp_list = [name for name in states if name not in answered_states]
         data_dict = {
             "states": temp_list
         }
