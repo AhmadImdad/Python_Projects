@@ -15,6 +15,7 @@ class FlightSearch:
         self.token_type = ""
         self.token = ""
         self.origin_iata_code = self.get_destination_code(FROM)
+        self.non_stop = "true"
 
     def get_destination_code(self, city_name):
         self.get_token()
@@ -64,7 +65,7 @@ class FlightSearch:
             "departureDate": departure_date,
             "returnDate": return_date,
             "adults": 1,
-            "nonStop": "true",
+            "nonStop": self.non_stop,
             "currencyCode": "GBP",
             "maxPrice": int(round(city["lowestPrice"])),
         }

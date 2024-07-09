@@ -21,9 +21,15 @@ cheapest_flight = list()
 updated = False
 count = 0
 for city in data_manager.gather_data:
+    flight_search.non_stop = "true"
     data = flight_search.find_cheap_flight(city)
+    if data is None or data == []:
+        flight_search.non_stop = "false"
+        data = flight_search.find_cheap_flight(city)
     if data is not None and data != []:
-        cheapest_flight.append(FlightData.cheapest_info(data))
+        cheapest_flight.append(FlightData.cheapest_info(data, flight_search.non_stop, city["iataCode"]))
         updated = True
 if updated:
-    NotificationManager.notifier(cheapest_flight)
+    notifier = NotificationManager()
+    notifier.notifier(cheapest_flight)
+    
