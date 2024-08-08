@@ -19,7 +19,7 @@ headers = {
     "X-Amzn-Trace-Id": "Root=1-66981a9c-6f0b0f6b2fb94d5e5c7b5a4c"
   }
 EMAIL = "ahmad.imdad009@gmail.com"
-PASSWORD = "zonwgzzzqdzdxbkb"
+PASSWORD = ""
 PRODUCT = "INSTANT POT"
 response = requests.get(url="https://www.amazon.com/SAMSUNG-Processor-Touchscreen-NP960XGK-KG1US-Moonstone/dp/B0CQ3VXJ3J/ref=sr_1_1?_encoding=UTF8&content-id=amzn1.sym.3b8e83c9-3c43-44b5-841c-814032918d4f&dib=eyJ2IjoiMSJ9.FZySsK-jxok2plvKN5Q6-ikTTjebrBA_UIaFx0hpmdm-FCZid2zbQ7nqE-UeeOHnvEjcD740_DZA3kgIPo9xshLsPMXoeor5nV7tTcJawze8mlsJ7aaSAynlDXBpL8YHj9CFOWH7HGpMK0oZNXTphQ.z4pEWfJscx1yTKmDCIWDJD9eUHotSdEtLcv0Mfl7hMY&dib_tag=se&keywords=computers&pd_rd_r=587b7fe7-a13d-4270-9789-ef8bced7f2ae&pd_rd_w=WMdCe&pd_rd_wg=A838U&pf_rd_p=3b8e83c9-3c43-44b5-841c-814032918d4f&pf_rd_r=4H4KA8ZE2R70JC80YS10&qid=1721242531&refinements=p_n_deal_type%3A23566065011&sr=8-1&th=1", headers=headers)
 print(response.text)

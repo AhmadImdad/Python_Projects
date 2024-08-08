@@ -2,7 +2,7 @@ import smtplib
 import requests
 
 user = "ahmad.imdad007@gmail.com"
-password = "yaqfethjdkqljgat"
+password = ""
 sheety_endpoint = ("https://api.sheety.co"
                    "/5b76d09a20bd625d88943bad5d69f77c/users/formResponses1")
 

@@ -5,7 +5,7 @@ import smtplib
 MY_LAT = 31.450365
 MY_LONG = 73.134964
 user = "ahmad.imdad007@gmail.com"
-password = "cxzuskofspvuezsx"
+password = ""
 
 iss_response = requests.get("http://api.open-notify.org/iss-now.json")
 iss_response.raise_for_status()
