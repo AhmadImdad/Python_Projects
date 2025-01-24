@@ -5,8 +5,8 @@ from twilio.rest import Client
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-account_sid = 'AC9a6fb4414e6272c653a3df3031584c35'
-auth_token = '3ef3b1f0081cca0c570290165d722645'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 STOCK = "TSLA"
